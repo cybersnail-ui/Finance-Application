@@ -336,8 +336,7 @@
 									maxlength="255"
 									name="company"
 									size="20"
-									type="text"
-									required />
+									type="text" />
 								<div class="messages"></div>
 							</div>
 							<div class="form-group">
@@ -716,43 +715,46 @@
 						<!--<div><label class="optional-text">Company Website URL - <span class="optional">Optional</label><input id="url" maxlength="80" name="url" size="20" type="text" /></div> -->
 						<!--<section>              <div><label>Type of Business</label><input /></div>            </section> -->
 						<!-- guarantor -->
-						<section class="radio-section">
-							<div class="form-label">
-								<label>Are you working with a guarantor?</label>
-								<svg
-									fill="#27b998"
-									xmlns="http://www.w3.org/2000/svg"
-									viewbox="0 0 24 24"
-									width="16"
-									height="16"
-									id="shipping-address">
-									<path
-										d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z" />
-									<path
-										d="M12,10H11a1,1,0,0,0,0,2h1v6a1,1,0,0,0,2,0V12A2,2,0,0,0,12,10Z" />
-									<circle cx="12" cy="6.5" r="1.5" />
-								</svg>
-							</div>
-							<div class="form-label">
-								<input
-									type="radio"
-									name="2"
-									value="guarantor"
-									id="open" /><label>Yes</label>
-							</div>
-							<div class="form-label">
-								<input
-									type="radio"
-									name="2"
-									value="guarantor"
-									id="close"
-									checked /><label>No</label>
-							</div>
-						</section>
 						<section class="guarantor">
 							<h2 class="form-divider" style="margin-top: 2rem; width: 100%">
-								2.5 Guarantor Information
+								3. Guarantor Information
 							</h2>
+							<section class="radio-section">
+								<div class="form-label">
+									<label
+										>Is your business address the same as your equipment
+										shipping address?</label
+									>
+									<svg
+										fill="#27b998"
+										xmlns="http://www.w3.org/2000/svg"
+										viewbox="0 0 24 24"
+										width="16"
+										height="16"
+										id="shipping-address">
+										<path
+											d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z" />
+										<path
+											d="M12,10H11a1,1,0,0,0,0,2h1v6a1,1,0,0,0,2,0V12A2,2,0,0,0,12,10Z" />
+										<circle cx="12" cy="6.5" r="1.5" />
+									</svg>
+								</div>
+								<div class="form-label">
+									<input
+										type="radio"
+										name="test"
+										value="shipping"
+										checked
+										id="close" /><label>Yes</label>
+								</div>
+								<div class="form-label">
+									<input
+										type="radio"
+										name="test"
+										value="shipping"
+										id="open" /><label>No</label>
+								</div>
+							</section>
 							<section>
 								<div class="form-group">
 									<div class="form-label">
@@ -909,12 +911,12 @@
 						</section>
 						<!-- end: guarantor -->
 						<h2 class="form-divider" style="margin-top: 2rem">
-							3. Equipment Information
+							4. Equipment Information
 						</h2>
 						<section>
 							<div class="form-group">
 								<div class="form-label">
-									<label>Seller Business Name</label>
+									<label>Equipment Vendor Name</label>
 									<svg
 										fill="#27b998"
 										xmlns="http://www.w3.org/2000/svg"
@@ -3611,12 +3613,11 @@
 	});
 
 	var isSameAsShipping = true;
-	var hasGuarantor = false;
+	var hasGuarantor = true;
 
 	$(document).ready(function () {
 		console.log('jquery initialized');
 		$('.shipping').hide();
-		$('.guarantor').hide();
 
 		$('input[type="radio"]').click(function () {
 			const target = $(this).attr('value');
