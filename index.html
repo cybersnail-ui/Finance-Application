@@ -286,13 +286,12 @@
 						method="POST"
 						name="example_form"
 						id="main"
-						novalidate
 						target="dummyframe">
 						<input
 							type="hidden"
 							name="captcha_settings"
-							value='{"keyname":"test","fallback":"true","orgId":"00DS0000003nLwL","ts":""}' />
-						<input type="hidden" name="oid" value="00DS0000003nLwL" />
+							value='{"keyname":"test","fallback":"true","orgId":"00DDQ0000008aJO","ts":""}' />
+						<input type="hidden" name="oid" value="00DDQ0000008aJO" />
 						<input type="hidden" name="recordType" value="0121N000000qrnl" />
 						<!--<input type=hidden name="retURL" value="https://google.com"> form return link -->
 						<input
@@ -307,9 +306,9 @@
 							value="dev.cybersnail@gmail.com" />
 						<input
 							type="hidden"
-							id="00NS000000QJcjj"
+							id="00NDQ000000JZbK"
 							maxlength="18"
-							name="00NS000000QJcjj"
+							name="00NDQ000000JZbK"
 							size="18"
 							value="00G3l000002uMfEEAU" />
 						<h2 class="form-divider">1. Business Information</h2>
@@ -336,7 +335,8 @@
 									maxlength="255"
 									name="company"
 									size="20"
-									type="text" />
+									type="text"
+									required />
 								<div class="messages"></div>
 							</div>
 							<div class="form-group">
@@ -418,7 +418,8 @@
 									maxlength="3"
 									name="00N3l00000QQvjU"
 									size="20"
-									type="tel" />
+									type="tel"
+									required />
 								<div class="messages"></div>
 							</div>
 						</section>
@@ -440,7 +441,7 @@
 										<circle cx="12" cy="6.5" r="1.5" />
 									</svg>
 								</div>
-								<input id="street" name="street" type="text" />
+								<input id="street" name="street" type="text" required />
 								<div class="messages"></div>
 							</div>
 						</section>
@@ -458,7 +459,7 @@
 							</div>
 							<div class="form-group">
 								<label>State/Province</label>
-								<select id="state" name="state" required>
+								<select id="state" name="state">
 									<option value="" disabled selected hidden>
 										Choose a state
 									</option>
@@ -553,6 +554,7 @@
 									type="radio"
 									name="test"
 									value="shipping"
+									required
 									checked
 									id="close" /><label>Yes</label>
 							</div>
@@ -590,7 +592,7 @@
 								</div>
 								<div class="form-group">
 									<label>Shipping State/Province</label>
-									<select id="00N3l00000QQvjS" name="00N3l00000QQvjS" required>
+									<select id="00N3l00000QQvjS" name="00N3l00000QQvjS">
 										<option value="" disabled selected hidden>
 											Choose a state
 										</option>
@@ -708,7 +710,8 @@
 									maxlength="10"
 									name="phone"
 									size="20"
-									type="text" />
+									type="text"
+									required />
 								<div class="messages"></div>
 							</div>
 						</section>
@@ -719,47 +722,10 @@
 							<h2 class="form-divider" style="margin-top: 2rem; width: 100%">
 								3. Guarantor Information
 							</h2>
-							<section class="radio-section">
-								<div class="form-label">
-									<label
-										>Is your business address the same as your equipment
-										shipping address?</label
-									>
-									<svg
-										fill="#27b998"
-										xmlns="http://www.w3.org/2000/svg"
-										viewbox="0 0 24 24"
-										width="16"
-										height="16"
-										id="shipping-address">
-										<path
-											d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z" />
-										<path
-											d="M12,10H11a1,1,0,0,0,0,2h1v6a1,1,0,0,0,2,0V12A2,2,0,0,0,12,10Z" />
-										<circle cx="12" cy="6.5" r="1.5" />
-									</svg>
-								</div>
-								<div class="form-label">
-									<input
-										type="radio"
-										name="test"
-										value="shipping"
-										checked
-										id="close" /><label>Yes</label>
-								</div>
-								<div class="form-label">
-									<input
-										type="radio"
-										name="test"
-										value="shipping"
-										id="open" /><label>No</label>
-								</div>
-							</section>
 							<section>
 								<div class="form-group">
 									<div class="form-label">
 										<label>First Name</label>
-										<!-- <svg  											fill="#27b998"  											xmlns="http://www.w3.org/2000/svg"  											viewBox="0 0 24 24"  											width="16"  											height="16"  											id="email-address">  											<path  												d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z" />  											<path  												d="M12,10H11a1,1,0,0,0,0,2h1v6a1,1,0,0,0,2,0V12A2,2,0,0,0,12,10Z" />  											<circle cx="12" cy="6.5" r="1.5" />  										</svg> -->
 									</div>
 									<div>
 										<input
@@ -775,14 +741,14 @@
 								<div class="form-group">
 									<div class="form-label">
 										<label>Last Name</label>
-										<!-- <svg  											fill="#27b998"  											xmlns="http://www.w3.org/2000/svg"  											viewBox="0 0 24 24"  											width="16"  											height="16"  											id="phone-number">  											<path  												d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z" />  											<path  												d="M12,10H11a1,1,0,0,0,0,2h1v6a1,1,0,0,0,2,0V12A2,2,0,0,0,12,10Z" />  											<circle cx="12" cy="6.5" r="1.5" />  										</svg> -->
 									</div>
 									<input
 										id="00NS000000QJg3z"
 										maxlength="10"
 										name="00NS000000QJg3z"
 										size="20"
-										type="text" />
+										type="text"
+										required />
 									<div class="messages"></div>
 								</div>
 							</section>
@@ -790,27 +756,40 @@
 								<div class="form-group">
 									<div class="form-label">
 										<label>Email</label>
-										<!-- <svg  											fill="#27b998"  											xmlns="http://www.w3.org/2000/svg"  											viewBox="0 0 24 24"  											width="16"  											height="16"  											id="phone-number">  											<path  												d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z" />  											<path  												d="M12,10H11a1,1,0,0,0,0,2h1v6a1,1,0,0,0,2,0V12A2,2,0,0,0,12,10Z" />  											<circle cx="12" cy="6.5" r="1.5" />  										</svg> -->
 									</div>
 									<input
 										id="00NS000000QJeDb"
 										maxlength="40"
 										name="00NS000000QJeDb"
 										size="20"
-										type="text" />
+										type="text"
+										required />
 									<div class="messages"></div>
 								</div>
 								<div class="form-group">
 									<div class="form-label">
 										<label>Social Security Number</label>
-										<!-- <svg  											fill="#27b998"  											xmlns="http://www.w3.org/2000/svg"  											viewBox="0 0 24 24"  											width="16"  											height="16"  											id="phone-number">  											<path  												d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z" />  											<path  												d="M12,10H11a1,1,0,0,0,0,2h1v6a1,1,0,0,0,2,0V12A2,2,0,0,0,12,10Z" />  											<circle cx="12" cy="6.5" r="1.5" />  										</svg> -->
+										<svg
+											fill="#27b998"
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 24 24"
+											width="16"
+											height="16"
+											id="social-security-number">
+											<path
+												d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z" />
+											<path
+												d="M12,10H11a1,1,0,0,0,0,2h1v6a1,1,0,0,0,2,0V12A2,2,0,0,0,12,10Z" />
+											<circle cx="12" cy="6.5" r="1.5" />
+										</svg>
 									</div>
 									<input
 										id="00NS000000QJeDX"
 										maxlength="9"
 										name="00NS000000QJeDX"
 										size="20"
-										type="text" />
+										type="text"
+										required />
 									<div class="messages"></div>
 								</div>
 							</section>
@@ -822,7 +801,8 @@
 										maxlength="255"
 										name="00NS000000QJg3k"
 										size="20"
-										type="text" />
+										type="text"
+										required />
 									<div class="messages"></div>
 								</div>
 							</section>
@@ -834,12 +814,13 @@
 										maxlength="250"
 										name="00NS000000QJg3V"
 										size="20"
-										type="text" />
+										type="text"
+										required />
 									<div class="messages"></div>
 								</div>
 								<div class="form-group">
 									<label>State/Province</label>
-									<select id="00NS000000QJg3a" name="00NS000000QJg3a" required>
+									<select id="00NS000000QJg3a" name="00NS000000QJg3a">
 										<option value="" disabled selected hidden>
 											Choose a state
 										</option>
@@ -904,11 +885,26 @@
 										maxlength="5"
 										name="00NS000000QJg3f"
 										size="20"
-										type="text" />
+										type="text"
+										required />
+									<div class="messages"></div>
+								</div>
+							</section>
+							<section class="checkbox-radio-section">
+								<div class="form-group">
+									<div class="checkbox-container">
+										<div class="checkbox-button">
+											<input
+												type="checkbox"
+												name="test2"
+												id="guarantor-checkbox" /><label>No Guarantor</label>
+										</div>
+									</div>
 									<div class="messages"></div>
 								</div>
 							</section>
 						</section>
+
 						<!-- end: guarantor -->
 						<h2 class="form-divider" style="margin-top: 2rem">
 							4. Equipment Information
@@ -936,7 +932,8 @@
 									maxlength="250"
 									name="00N1N00000PGIes"
 									size="20"
-									type="text" />
+									type="text"
+									required />
 								<div class="messages"></div>
 							</div>
 						</section>
@@ -963,7 +960,8 @@
 									maxlength="250"
 									name="00N1N00000PGIex"
 									size="20"
-									type="text" />
+									type="text"
+									required />
 								<div class="messages"></div>
 							</div>
 							<div class="form-group">
@@ -990,7 +988,8 @@
 										maxlength="250"
 										name="00N1N00000PGIf2"
 										size="20"
-										type="text" />
+										type="text"
+										required />
 								</div>
 								<div class="messages"></div>
 							</div>
@@ -3598,6 +3597,11 @@
 			'Equipment address refers to the address where the equipment will be installed.',
 		arrow: false,
 	});
+	tippy('#social-security-number', {
+		content:
+			"Our forms are all backed by Digicert, the world's largest high-assurance certificate authority, ensuring your data is never stored or exposed. All information sent is securely encrypted on both ends ensuring that sensitive data can be safely exchanged.",
+		arrow: false,
+	});
 
 	$('#contact-button').click(function () {
 		$('html, body').animate(
@@ -3686,7 +3690,6 @@
 		var constraints = {
 			email: {
 				// Email is required
-				presence: true,
 				// and must be an email (duh)
 				email: true,
 			},
@@ -3697,7 +3700,6 @@
 			// DBA
 			'00N1N00000OxL65': {},
 			phone: {
-				presence: true,
 				length: {
 					minimum: 10,
 					message: 'Field must be 10 digits long',
@@ -3709,21 +3711,18 @@
 			},
 			// years in business
 			'00N3l00000QQvjU': {
-				presence: true,
 				format: {
 					pattern: '^[0-9]*$',
 					message: 'Field cannot contain symbols or characters',
 				},
 			},
 			first_name: {
-				presence: true,
 				format: {
 					pattern: '[A-Za-z]+',
 					message: 'Field cannot contain symbols or numbers',
 				},
 			},
 			last_name: {
-				presence: true,
 				format: {
 					pattern: '[A-Za-z]+',
 					message: 'Field cannot contain symbols or numbers',
@@ -3744,13 +3743,11 @@
 				},
 			},
 			company: {
-				presence: true,
 				length: {
 					maximum: 255,
 				},
 			},
 			city: {
-				presence: true,
 				format: {
 					pattern: '[A-Za-z]+',
 					message: 'Field cannot contain symbols or numbers',
@@ -3781,14 +3778,7 @@
 					message: 'Field cannot contain symbols or numbers',
 				},
 			},
-			street: {
-				presence: true,
-			},
-			state: {
-				presence: true,
-			},
 			zip: {
-				presence: true,
 				format: {
 					pattern: '^[0-9]*$',
 					message: 'Field cannot contain symbols or characters',
@@ -3846,21 +3836,18 @@
 			},
 			// equipment seller
 			'00N1N00000PGIes': {
-				presence: true,
 				length: {
 					maximum: 250,
 				},
 			},
 			// type of equipment
 			'00N1N00000PGIex': {
-				presence: true,
 				length: {
 					maximum: 250,
 				},
 			},
 			// equipment cost
 			'00N1N00000PGIf2': {
-				presence: true,
 				length: {
 					maximum: 250,
 				},
@@ -3872,6 +3859,16 @@
 		};
 
 		validate.validators.presence.options = { message: 'Field is required' };
+
+		// function that toggles the required field of the guarantor information
+		var checkboxBool = false;
+		$('#guarantor-checkbox').click(function () {
+			console.log('i was clicked : )');
+			$(
+				'#00NS000000QJeDW, #00NS000000QJg3z, #00NS000000QJeDb, #00NS000000QJeDX, #00NS000000QJg3k, #00NS000000QJg3V, #00NS000000QJg3f'
+			).attr('required', checkboxBool);
+			checkboxBool = !checkboxBool;
+		});
 
 		var ssnInput;
 		var ssnInput2;
@@ -4738,6 +4735,7 @@
 	.g-recaptcha {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 	}
 	.legal-text-container p {
 		display: flex;
@@ -4897,5 +4895,23 @@
 		max-width: 250px;
 		border-radius: 0.5rem;
 		box-shadow: 0 8px 16px 0px rgb(0 0 0 / 20%);
+	}
+	.checkbox-radio-button {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+	.checkbox-button {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem 2rem;
+		border: 1px solid #dddde4;
+		border-radius: 100rem;
+	}
+	.checkbox-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 </style>
