@@ -729,9 +729,9 @@
 									</div>
 									<div>
 										<input
-											id="00NS000000QJeDW"
+											id="00NDQ000000JZbU"
 											maxlength="80"
-											name="00NS000000QJeDW"
+											name="00NDQ000000JZbU"
 											size="20"
 											type="text"
 											required />
@@ -743,9 +743,9 @@
 										<label>Last Name</label>
 									</div>
 									<input
-										id="00NS000000QJg3z"
+										id="00NDQ000000JZbZ"
 										maxlength="10"
-										name="00NS000000QJg3z"
+										name="00NDQ000000JZbZ"
 										size="20"
 										type="text"
 										required />
@@ -758,9 +758,9 @@
 										<label>Email</label>
 									</div>
 									<input
-										id="00NS000000QJeDb"
+										id="00NDQ000000JZbe"
 										maxlength="40"
-										name="00NS000000QJeDb"
+										name="00NDQ000000JZbe"
 										size="20"
 										type="text"
 										required />
@@ -784,9 +784,9 @@
 										</svg>
 									</div>
 									<input
-										id="00NS000000QJeDX"
+										id="00NDQ000000JZbj"
 										maxlength="9"
-										name="00NS000000QJeDX"
+										name="00NDQ000000JZbj"
 										size="20"
 										type="text"
 										required />
@@ -797,9 +797,9 @@
 								<div class="form-group">
 									<div class="form-label"><label>Address</label></div>
 									<input
-										id="00NS000000QJg3k"
+										id="00NDQ000000JZbo"
 										maxlength="255"
-										name="00NS000000QJg3k"
+										name="00NDQ000000JZbo"
 										size="20"
 										type="text"
 										required />
@@ -810,9 +810,9 @@
 								<div class="form-group">
 									<label>City</label>
 									<input
-										id="00NS000000QJg3V"
+										id="00NDQ000000JZbt"
 										maxlength="250"
-										name="00NS000000QJg3V"
+										name="00NDQ000000JZbt"
 										size="20"
 										type="text"
 										required />
@@ -820,7 +820,7 @@
 								</div>
 								<div class="form-group">
 									<label>State/Province</label>
-									<select id="00NS000000QJg3a" name="00NS000000QJg3a">
+									<select id="00NDQ000000JZby" name="00NDQ000000JZby">
 										<option value="" disabled selected hidden>
 											Choose a state
 										</option>
@@ -881,9 +881,9 @@
 								<div class="form-group">
 									<label>Zip</label>
 									<input
-										id="00NS000000QJg3f"
+										id="00NDQ000000JZc3"
 										maxlength="5"
-										name="00NS000000QJg3f"
+										name="00NDQ000000JZc3"
 										size="20"
 										type="text"
 										required />
@@ -3694,7 +3694,7 @@
 				email: true,
 			},
 			// guarantor email
-			'00NS000000QJeDb': {
+			'00NDQ000000JZbe': {
 				email: true,
 			},
 			// DBA
@@ -3729,14 +3729,14 @@
 				},
 			},
 			// guarantor first name
-			'00NS000000QJeDW': {
+			'00NDQ000000JZbU': {
 				format: {
 					pattern: '[A-Za-z]+',
 					message: 'Field cannot contain symbols or numbers',
 				},
 			},
 			// guarantor last name
-			'00NS000000QJg3z': {
+			'00NDQ000000JZbZ': {
 				format: {
 					pattern: '[A-Za-z]+',
 					message: 'Field cannot contain symbols or numbers',
@@ -3772,7 +3772,7 @@
 				},
 			},
 			// guarantor city
-			'00NS000000QJg3V': {
+			'00NDQ000000JZbt': {
 				format: {
 					pattern: '[A-Za-z]+',
 					message: 'Field cannot contain symbols or numbers',
@@ -3789,7 +3789,7 @@
 				},
 			},
 			// guarantor zip
-			'00NS000000QJg3f': {
+			'00NDQ000000JZc3': {
 				format: {
 					pattern: '^[0-9]*$',
 					message: 'Field cannot contain symbols or characters',
@@ -3823,7 +3823,7 @@
 				},
 			},
 			// guarantor ssn
-			'00NS000000QJeDX': {
+			'00NDQ000000JZbj': {
 				format: {
 					pattern: '^[0-9]*$',
 					message: 'Field cannot contain symbols or characters',
@@ -3865,7 +3865,7 @@
 		$('#guarantor-checkbox').click(function () {
 			console.log('i was clicked : )');
 			$(
-				'#00NS000000QJeDW, #00NS000000QJg3z, #00NS000000QJeDb, #00NS000000QJeDX, #00NS000000QJg3k, #00NS000000QJg3V, #00NS000000QJg3f'
+				'#00NDQ000000JZbU, #00NDQ000000JZbZ, #00NDQ000000JZbe, #00NDQ000000JZbj, #00NDQ000000JZbo, #00NDQ000000JZbt, #00NDQ000000JZc3'
 			).attr('required', checkboxBool);
 			checkboxBool = !checkboxBool;
 		});
@@ -3873,10 +3873,10 @@
 		var ssnInput;
 		var ssnInput2;
 
-		$('#00N3l00000QQvjO, #00NS000000QJeDX').on('input', function () {
+		$('#00N3l00000QQvjO, #00NDQ000000JZbj').on('input', function () {
 			// do something
 			ssnInput = $('#00N3l00000QQvjO').val();
-			ssnInput2 = $('#00NS000000QJeDX').val();
+			ssnInput2 = $('#00NDQ000000JZbj').val();
 		});
 
 		$('#00N3l00000QQvjO').focusout(function () {
@@ -3888,19 +3888,19 @@
 			$('#00N3l00000QQvjO').mask(maskedInput);
 		});
 
-		$('#00NS000000QJeDX').focusout(function () {
+		$('#00NDQ000000JZbj').focusout(function () {
 			var maskedInput = '';
 
 			for (var i = 0; i < ssnInput2.length; i++) {
 				maskedInput += '*';
 			}
-			$('#00NS000000QJeDX').mask(maskedInput);
+			$('#00NDQ000000JZbj').mask(maskedInput);
 		});
 
-		$('#00N3l00000QQvjO, #00NS000000QJeDX').focusin(function () {
-			$('#00N3l00000QQvjO, #00NS000000QJeDX').unmask();
+		$('#00N3l00000QQvjO, #00NDQ000000JZbj').focusin(function () {
+			$('#00N3l00000QQvjO, #00NDQ000000JZbj').unmask();
 			$('#00N3l00000QQvjO').val(ssnInput);
-			$('#00NS000000QJeDX').val(ssnInput2);
+			$('#00NDQ000000JZbj').val(ssnInput2);
 		});
 
 		// Hook up the form so we can prevent it from being posted
@@ -3935,9 +3935,9 @@
 
 		function handleFormSubmit(form, input) {
 			// validate the form against the constraints
-			$('#00N3l00000QQvjO, 00NS000000QJeDX').unmask();
+			$('#00N3l00000QQvjO, 00NDQ000000JZbj').unmask();
 			$('#00N3l00000QQvjO').val(ssnInput);
-			$('#00NS000000QJeDX').val(ssnInput2);
+			$('#00NDQ000000JZbj').val(ssnInput2);
 			var errors = validate(form, constraints, {
 				fullMessages: false,
 			});
@@ -3957,7 +3957,7 @@
 			} else {
 				console.log('there are errors!');
 			}
-			$('#00N3l00000QQvjO, #00NS000000QJeDX').mask('*********');
+			$('#00N3l00000QQvjO, #00NDQ000000JZbj').mask('*********');
 		}
 
 		// Updates the inputs with the validation errors
