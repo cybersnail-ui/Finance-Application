@@ -259,7 +259,7 @@
 						</button>
 					</p>
 				</div>
-				<script src="https://www.google.com/recaptcha/api.js"></script>
+				<!-- <script src="https://www.google.com/recaptcha/api.js"></script>
 				<script>
 					function timestamp() {
 						var response = document.getElementById('g-recaptcha-response');
@@ -273,7 +273,7 @@
 						}
 					}
 					setInterval(timestamp, 500);
-				</script>
+				</script> -->
 				<!-- Form -->
 				<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 				<iframe
@@ -287,10 +287,10 @@
 						name="example_form"
 						id="main"
 						target="dummyframe">
-						<input
+						<!-- <input
 							type="hidden"
 							name="captcha_settings"
-							value='{"keyname":"test","fallback":"true","orgId":"00DDQ0000008aJO","ts":""}' />
+							value='{"keyname":"test","fallback":"true","orgId":"00DDQ0000008aJO","ts":""}' /> -->
 						<input type="hidden" name="oid" value="00DDQ0000008aJO" />
 						<input type="hidden" name="recordType" value="0121N000000qrnl" />
 						<!--<input type=hidden name="retURL" value="https://google.com"> form return link -->
@@ -994,9 +994,9 @@
 								<div class="messages"></div>
 							</div>
 						</section>
-						<div
+						<!-- <div
 							class="g-recaptcha"
-							data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+							data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div> -->
 						<div class="form-group">
 							<button class="button" type="submit">Send application</button>
 						</div>
@@ -3977,7 +3977,7 @@
 			// then we update the form to reflect the results
 			showErrors(form, errors || {});
 			if (!errors) {
-				var response = grecaptcha.getResponse();
+				/* var response = grecaptcha.getResponse();
 
 				if (response.length == 0) {
 					console.log('captcha not checked');
@@ -3986,7 +3986,10 @@
 					$('.thanks-container').fadeIn();
 					$('.thanks-container').css('display', 'flex');
 					showSuccess();
-				}
+				} */
+				$('.thanks-container').fadeIn();
+				$('.thanks-container').css('display', 'flex');
+				showSuccess();
 			} else {
 				console.log('there are errors!');
 			}
