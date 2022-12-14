@@ -3758,16 +3758,17 @@
 					maximum: 255,
 				},
 			},
+			
 			city: {
 				format: {
-					pattern: '[A-Za-z]+',
+					pattern: /^[A-Za-z\s]*$/,
 					message: 'Field cannot contain symbols or numbers',
 				},
 			},
 			// shipping city
 			'00N3l00000QQvjR': {
 				format: {
-					pattern: '[A-Za-z]+',
+					pattern: /^[A-Za-z\s]*$/,
 					message: 'Field cannot contain symbols or numbers',
 				},
 			},
