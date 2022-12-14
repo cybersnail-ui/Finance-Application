@@ -3872,20 +3872,22 @@
 		validate.validators.presence.options = { message: 'Field is required' };
 
 		// function that toggles the required field of the guarantor information
+
+		var ssnInput;
+		var ssnInput2;
+
 		$('#guarantor-checkbox').click(function () {
 			console.log('i was clicked : )');
 			$(
 				'#00NDQ000000JZbU, #00NDQ000000JZbZ, #00NDQ000000JZbe, #00NDQ000000JZbj, #00NDQ000000JZbo, #00NDQ000000JZbt, #00NDQ000000JZc3, #00NDQ000000JZby'
 			).val('');
+			ssnInput2 = '';
 			$(
 				'#00NDQ000000JZbU, #00NDQ000000JZbZ, #00NDQ000000JZbe, #00NDQ000000JZbj, #00NDQ000000JZbo, #00NDQ000000JZbt, #00NDQ000000JZc3'
 			).attr('required', checkboxBool);
 			$('#guarantorSection').toggle();
 			checkboxBool = !checkboxBool;
 		});
-
-		var ssnInput;
-		var ssnInput2;
 
 		$('#00N3l00000QQvjO, #00NDQ000000JZbj').on('input', function () {
 			// do something
