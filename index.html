@@ -3473,7 +3473,7 @@
 				personInfo.cobrands.some((company) => company.full_name === companyName)
 			) {
 				console.log('show cobranded form!');
-				$('#00N1N00000PGIes').prop('disabled', true);
+				$('#00N1N00000PGIes').css('pointer-events', 'none');
 				const companyInfo = personInfo.cobrands.find(
 					({ full_name }) => full_name.toLowerCase() === companyName
 				);
