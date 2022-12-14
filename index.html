@@ -706,7 +706,7 @@
 						<h2 class="form-divider" style="margin-top: 2rem; width: 100%">
 							3. Guarantor Information
 						</h2>
-						<section class="guarantor" id="guarantorSection">
+						<section class="guarantor">
 							<section>
 								<div class="form-group">
 									<div class="form-label">
@@ -2058,7 +2058,6 @@
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <div id="particles-js" style="background-color: "></div>
 <script>
-	var checkboxBool = false;
 	const repList = [
 		{
 			full_name: 'Andrew McBride',
@@ -3640,9 +3639,6 @@
 				if (target == 'shipping') {
 					isSameAsShipping = false;
 					console.log(isSameAsShipping);
-					$(
-						'#00N3l00000QQvjP, #00N3l00000QQvjR, #00N3l00000QQvjT'
-					).attr('required', true);
 				}
 				if (target == 'guarantor') {
 					hasGuarantor = true;
@@ -3870,6 +3866,7 @@
 		validate.validators.presence.options = { message: 'Field is required' };
 
 		// function that toggles the required field of the guarantor information
+		var checkboxBool = false;
 		$('#guarantor-checkbox').click(function () {
 			console.log('i was clicked : )');
 			$(
@@ -3878,7 +3875,6 @@
 			$(
 				'#00NDQ000000JZbU, #00NDQ000000JZbZ, #00NDQ000000JZbe, #00NDQ000000JZbj, #00NDQ000000JZbo, #00NDQ000000JZbt, #00NDQ000000JZc3'
 			).attr('required', checkboxBool);
-			$('#guarantorSection').toggle();
 			checkboxBool = !checkboxBool;
 		});
 
@@ -3966,8 +3962,6 @@
 					$('.thanks-container').css('display', 'flex');
 					showSuccess();
 				} */
-
-				
 				$('.thanks-container').fadeIn();
 				$('.thanks-container').css('display', 'flex');
 				showSuccess();
@@ -4067,15 +4061,6 @@
 				confettiColors: ['#27B998', '#99CE7E', '#4AC1E0'],
 			});
 			document.getElementById('main').reset();
-			$('#guarantorSection').show();
-			checkboxBool = true;
-			$(
-				'#00NDQ000000JZbU, #00NDQ000000JZbZ, #00NDQ000000JZbe, #00NDQ000000JZbj, #00NDQ000000JZbo, #00NDQ000000JZbt, #00NDQ000000JZc3'
-			).attr('required', checkboxBool);
-			$(
-				'#00N3l00000QQvjP, #00N3l00000QQvjR, #00N3l00000QQvjT'
-			).attr('required', checkboxBool);
-			$('#guarantor-checkbox').prop('checked', false);
 			console.log('the form should have reset!');
 		}
 	})();
