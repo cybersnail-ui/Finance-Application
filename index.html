@@ -3652,6 +3652,9 @@
 
 			if (type == 'close') {
 				$('.' + target).slideUp('fast');
+					$(
+						'#00N3l00000QQvjP, #00N3l00000QQvjR, #00N3l00000QQvjT'
+					).attr('required', false);
 				if (target == 'shipping') {
 					if (!isSameAsShipping) {
 						$('.' + target)
@@ -3873,7 +3876,7 @@
 		$('#guarantor-checkbox').click(function () {
 			console.log('i was clicked : )');
 			$(
-				'#00NDQ000000JZbU, #00NDQ000000JZbZ, #00NDQ000000JZbe, #00NDQ000000JZbj, #00NDQ000000JZbo, #00NDQ000000JZbt, #00NDQ000000JZc3'
+				'#00NDQ000000JZbU, #00NDQ000000JZbZ, #00NDQ000000JZbe, #00NDQ000000JZbj, #00NDQ000000JZbo, #00NDQ000000JZbt, #00NDQ000000JZc3, #00NDQ000000JZby'
 			).val('');
 			$(
 				'#00NDQ000000JZbU, #00NDQ000000JZbZ, #00NDQ000000JZbe, #00NDQ000000JZbj, #00NDQ000000JZbo, #00NDQ000000JZbt, #00NDQ000000JZc3'
@@ -4060,7 +4063,6 @@
 
 			document.getElementById('main').submit();
 			$('.shipping').hide();
-			$('.guarantor').hide();
 			const jsConfetti = new JSConfetti();
 
 			jsConfetti.addConfetti({
@@ -4068,20 +4070,14 @@
 			});
 			document.getElementById('main').reset();
 			$('#guarantorSection').show();
-			checkboxBool = true;
-			$(
-				'#00NDQ000000JZbU, #00NDQ000000JZbZ, #00NDQ000000JZbe, #00NDQ000000JZbj, #00NDQ000000JZbo, #00NDQ000000JZbt, #00NDQ000000JZc3'
-			).attr('required', checkboxBool);
-			$(
-				'#00N3l00000QQvjP, #00N3l00000QQvjR, #00N3l00000QQvjT'
-			).attr('required', checkboxBool);
 			$('#guarantor-checkbox').prop('checked', false);
 			console.log('the form should have reset!');
 		}
 	})();
 
 	function hideThanksMessage() {
-		$('.thanks-container').hide();
+		window.location.reload();
+		//$('.thanks-container').hide();
 	}
 </script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
